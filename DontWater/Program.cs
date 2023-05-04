@@ -55,9 +55,9 @@ char[,] SeparateLiquids(char[,] glass)
 char[,] SeparateLiquidsLinq(char[,] glass)
 {
 
-    var liquidsLine = glass.Cast<char>()
-                  .OrderBy(x => "OAWH".IndexOf(x))
-                  .ToArray();
+    var liquidsLine = glass.Cast<char>()  // приводит массив к типу char
+                  .OrderBy(x => "OAWH".IndexOf(x)) // группирует в указонном порядке
+                  .ToArray(); // формирует массив на выходе
 
     int height = glass.GetLength(0);
     int width = glass.GetLength(1);
